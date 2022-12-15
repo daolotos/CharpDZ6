@@ -1,10 +1,30 @@
 ﻿
 int N = ReadInt("Введите размер массива: ");
-int[] array = new int[N];
+var numbers = InputIntArray(N);
+
+int positiveCount = GetPositiveCount(numbers);
 
 
-Console.WriteLine("Количество четных чисел: ");
+Console.WriteLine($"Количество чисел больше 0: {positiveCount}");
 
+int GetPositiveCount(int[] numbers)
+{
+    int count = 0;
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        if (numbers[i] > 0)
+            count++;
+    }
+    return count;
+}
+
+int[] InputIntArray(int count)
+{
+    int[] numbers = new int[count];
+    for (int i = 0; i < count; i++)
+        numbers[i] = ReadInt($"Введите число {i}:");
+    return numbers;
+}
 
 int ReadInt(string prompt)
 {
