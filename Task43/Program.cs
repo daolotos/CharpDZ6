@@ -1,5 +1,5 @@
 ﻿
-Console.WriteLine("Рассчет пересечения 2х прямых y = k1*x + b1 и y = k2*x + b2");
+Console.WriteLine("Расчет пересечения 2х прямых y = k1*x + b1 и y = k2*x + b2");
 float k1 = ReadFloat("k1 = ");
 float b1 = ReadFloat("b1 = ");
 float k2 = ReadFloat("k2 = ");
